@@ -45,8 +45,36 @@ home teleport - 39000g
 collector whistle - 1200g
 miner whistle - 15000g
 gravity enhancer - 40000g
-shobby pickaxe - 100g
+shobby pickaxe - 100g (sells for 20g)
 shobby axe - 200g
 shobby battleaxe - 200g
 shobby shotgun - 200g
 shobby rifle - 290g
+copper pickaxe - 230g
+copper axe - 470g
+copper battleaxe - 470g
+copper shotgun - 470g
+copper rifle - 690g
+iron pickaxe - 330g (100 strength)
+iron axe - 670g
+iron battleaxe - 670g
+iron shotgun - 670g
+iron rifle - 980g
+sapphire pickaxe - 670g
+sapphire axe - 1360g
+sapphire battleaxe - 1360g
+sapphire shotgun - 1360g
+sapphire rifle - 1900g
+emerald pickaxe - 1000g
+emerald axe - 
+emerald battleaxe - 
+emerald
+
+Bonus Upgrades
+Jetpack - 5000g
+angle wings - 25000g
+inventory slots - 500g, 5000g, 50000g (+10 slots per upgrade)
+increase inventory stack size - 5000g, 50000g, 500000g (base 32>64>256>1024)
+add time - 500g, 3000g (+100 seconds per upgrade
+unlock item filter - 40000g
+one-click chest looting - 5000g
