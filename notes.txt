@@ -1,5 +1,6 @@
 - 30 full layers of dirt before stone
 - ores in dirt are coal, iron, copper, emerald, sapphire
+- 27 full layers of stone before blue stone
 - ores in dirt are coal, iron, copper, emerald, sapphire, amethyst, silver
 - Amethyst is 70g
 - iron is 4g
@@ -8,4 +9,4 @@
 - emerald is 10g
 - sapphire is 8g
 - bonuses: 500g, 750g, 1000g, 1500g, 2000g, 2500g
-- quotes: 40, 80, 160, 320, 580, 900, 1500
+- quotes: 40, 80, 160, 320, 580, 900, 1500, 2200
