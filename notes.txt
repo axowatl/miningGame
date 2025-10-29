@@ -1,7 +1,8 @@
 - layers are 30 full with about 10 for mixed
 - ores in dirt are coal, iron, copper, emerald, sapphire
 - ores in stone are coal, iron, copper, emerald, sapphire, amethyst, silver
-- ore is blue stone are coal, iron, copper, emerald, sapphire, amethyst, silver, gold, ruby
+- ore in blue stone are coal, iron, copper, emerald, sapphire, amethyst, silver, gold, ruby
+- ore in red stone are coal, iron, copper, emerald, sapphire, amethyst, silver, gold, ruby, diamond, pink diamond
 - Amethyst is 70g
 - iron is 4g
 - coal is 1g
@@ -55,20 +56,41 @@ copper axe - 470g
 copper battleaxe - 470g
 copper shotgun - 470g
 copper rifle - 690g
-iron pickaxe - 330g (100 strength)
+iron pickaxe - 330g (100 strength, sells for 165g)
 iron axe - 670g
 iron battleaxe - 670g
 iron shotgun - 670g
-iron rifle - 980g
+iron rifle - 980g (17 bullet strength, 30.30 bullets per second, sells for 490g)
 sapphire pickaxe - 670g
 sapphire axe - 1360g
 sapphire battleaxe - 1360g
 sapphire shotgun - 1360g
 sapphire rifle - 1900g
-emerald pickaxe - 1000g
-emerald axe - 
-emerald battleaxe - 
-emerald
+emerald pickaxe - 1000g (300 strength)
+emerald axe - 2030g
+emerald battleaxe - 2030g
+emerald shotgun - 2030g
+emerald rifle - 2900g (50 bullet strength, 30.30 bullets per second, sells for 1450g)
+silver pickaxe - 3330g (1000 strength)
+silver axe - 9430g
+silver battleaxe - 9430g
+silver shotgun - 9430g
+silver rifle - 14300g (167 bullet strength, 30.30 bullets per second, sells for 7150g)
+amethyst pickaxe - 10000g (3000 strength)
+amethyst axe - 28300g
+amethyst battleaxe - 28300g
+amethyst shotgun - 28300g
+amethyst rifle - 43000g (500 bullet strength, 30.30 bullets per second)
+gold pickaxe - 33000g (10000 strength)
+gold axe - 94400g
+gold battleaxe - 94400g
+gold shotgun - 94400g
+gold rifle - 143000g (1667 bullet strength, 30.30 bullets per second)
+ruby pickaxe - 100000g (30000 strength)
+ruby axe - 283000g
+ruby battleaxe - 283000g
+ruby shotgun - 283000g
+ruby rifle - 430000g
 
 Bonus Upgrades
 Jetpack - 5000g
