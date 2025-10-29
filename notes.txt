@@ -1,12 +1,52 @@
-- 30 full layers of dirt before stone
+- layers are 30 full with about 10 for mixed
 - ores in dirt are coal, iron, copper, emerald, sapphire
-- 27 full layers of stone before blue stone
-- ores in dirt are coal, iron, copper, emerald, sapphire, amethyst, silver
+- ores in stone are coal, iron, copper, emerald, sapphire, amethyst, silver
+- ore is blue stone are coal, iron, copper, emerald, sapphire, amethyst, silver, gold, ruby
 - Amethyst is 70g
 - iron is 4g
 - coal is 1g
 - copper is 3g
-- emerald is 10g
+- Emerald is 10g
 - sapphire is 8g
-- bonuses: 500g, 750g, 1000g, 1500g, 2000g, 2500g
-- quotes: 40, 80, 160, 320, 580, 900, 1500, 2200
+- silver is 40g
+- ruby is 500g
+- gold is 300g
+- diamond is 4000g
+- pink diamond is 7500g
+- bonuses: 500, 750, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000,  6000,  7000,  9000, 10000
+- quotes:   40,  80,  160,  320,  580,  900, 1500, 2200, 3000, 5000, 8000, 12000, 18000, 28000, 40000
+
+Internship
+Equipment
+ladder - 2g
+platform - 2g
+weak bomb - 50g
+weak dynamite - 50g
+weak mortar bomb - 50g
+medium bomb - 500g
+medium dynamite - 500g
+medium mortar bomb - 500g
+strong bomb - 5000g
+strong dynamite - 5000g
+strong mortar bomb - 5000g
+ultimate bomb - 50000g
+ultimate dynamite - 50000g
+ultimate mortar bomb - 50000g
+weak mortar gun - 2000g
+strong mortar gun - 20000g
+powerful mortar gun - 200000g
+ungodly mortar gun - 2000000g
+ultimate mortar gun - 22000000g
+weak drill - 400g
+strong drill - 3600g
+powerful drill - 32400g
+ungodly drill - 291600g
+home teleport - 39000g
+collector whistle - 1200g
+miner whistle - 15000g
+gravity enhancer - 40000g
+shobby pickaxe - 100g
+shobby axe - 200g
+shobby battleaxe - 200g
+shobby shotgun - 200g
+shobby rifle - 290g
