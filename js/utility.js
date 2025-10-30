@@ -31,13 +31,13 @@ export function createShader(gl, source, type) {
  * @param {WebGLShader} fragmentShaderSource 
  * @returns 
  */
-export function createProgram(gl, vertexShaderSource, fragmentShaderSource) {
+export function createProgram(gl, vshader, fshader) {
 	var program = gl.createProgram();
 	// var vshader = createShader(gl, vertexShaderSource, gl.VERTEX_SHADER);
 	// var fshader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER);
-	gl.attachShader(program, vertexShaderSource);
+	gl.attachShader(program, vshader);
 	gl.deleteShader(vshader);
-	gl.attachShader(program, fragmentShaderSource);
+	gl.attachShader(program, fshader);
 	gl.deleteShader(fshader);
 	gl.linkProgram(program);
 
