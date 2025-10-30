@@ -1,15 +1,10 @@
 #version 300 es
+precision highp float;
 
-// Set the precision for floating-point numbers.
-precision mediump float;
-
-// The interpolated UV coordinate from the vertex shader.
-in vec2 v_uv;
-
-// The output variable for the fragment's final color.
-out vec4 outColor;
+uniform vec2 u_resolution;
+out vec4 fragColor;
 
 void main() {
-  // Use the u (x) value for red and the v (y) value for green.
-  outColor = vec4(v_uv.x, v_uv.y, 0.0, 1.0);
+    vec2 pos = gl_FragCoord.xy / u_resolution.xy;
+    fragColor = vec4(pos.x, pos.y, 0.5, 1.0);
 }
