@@ -1,3 +1,5 @@
+import { fetchTextFile } from "./utility";
+
 /**
  * @type {HTMLCanvasElement}
  */
@@ -10,3 +12,6 @@ canvas.height = height;
  * @type {WebGL2RenderingContext}
  */
 const gl = canvas.getContext('webgl2');
+
+const vertShader = await fetchTextFile('../shaders/vertex/basic.vert');
+console.log('Vertex Shader:', vertShader);
