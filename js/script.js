@@ -1,4 +1,4 @@
-import { fetchTextFile } from "./utility";
+import { fetchTextFile } from "./utility.js";
 
 /**
  * @type {HTMLCanvasElement}
