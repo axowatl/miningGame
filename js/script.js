@@ -1,4 +1,4 @@
-import { fetchTextFile, createShader, createProgram } from "./utility.js";
+import { fetchTextFile, createShader, createProgram, loadTexture } from "./utility.js";
 
 /**
  * @type {HTMLCanvasElement}
@@ -26,8 +26,8 @@ const resizeCanvas = () => {
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
-const vertCode = await fetchTextFile('./shaders/vertex/basic.vert');
-const fragCode = await fetchTextFile('./shaders/fragment/basic.frag');
+const vertCode = await fetchTextFile('./shaders/vertex/basicImage.vert');
+const fragCode = await fetchTextFile('./shaders/fragment/basicImage.frag');
 console.log('Vertex Shader:', vertCode);
 console.log('Fragment Shader:', fragCode);
 
@@ -37,18 +37,15 @@ const fragShader = createShader(gl, fragCode, gl.FRAGMENT_SHADER);
 const program = createProgram(gl, vertShader, fragShader);
 gl.useProgram(program);
 
-// Create a Vertex Array Object (VAO) to store our attribute configuration
+const texture = loadTexture(gl, "./assets/dirt1.png");
+
+// Create a Vertex Array Object (VAO)
 const vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
-// A simple quad with 4 vertices that covers the entire clip space from -1 to 1.
-// We will draw this as a triangle strip.
-const vertices = new Float32Array([
-    -1.0, -1.0,
-    -1.0,  1.0,
-     1.0, -1.0,
-     1.0,  1.0
-]);
+// Quad vertices (-1 to 1) and corresponding texture coordinates (0 to 1)
+const vertices = new Float32Array([-1.0, -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0]);
+const texCoords = new Float32Array([0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0]);
 
 // Create a buffer for the vertices
 const vertexBuffer = gl.createBuffer();
@@ -63,23 +60,38 @@ gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0);
 // Get the uniform location for canvas size (useful for shaders)
 const resolutionUniformLocation = gl.getUniformLocation(program, "u_resolution");
 
-// Clear the canvas
-gl.clearColor(0.0, 0.0, 0.0, 1.0);
-gl.clear(gl.COLOR_BUFFER_BIT);
+const texCoordBuffer = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, texCoordBuffer);
+gl.bufferData(gl.ARRAY_BUFFER, texCoords, gl.STATIC_DRAW);
 
-// Draw the scene
-const draw = () => {
-    // Update the uniform for resolution
+const texCoordAttributeLocation = gl.getAttribLocation(program, "a_texcoord");
+gl.enableVertexAttribArray(texCoordAttributeLocation);
+gl.vertexAttribPointer(texCoordAttributeLocation, 2, gl.FLOAT, false, 0, 0);
+
+// Get uniform location for the image texture and assign it to texture unit 0
+const imageUniformLocation = gl.getUniformLocation(program, "u_image");
+gl.uniform1i(imageUniformLocation, 0);
+
+// The render loop function
+const render = () => {
+    // Update the uniform for resolution (if it changes)
     gl.uniform2f(resolutionUniformLocation, gl.canvas.width, gl.canvas.height);
     
+    // Clear the canvas every frame
+    gl.clearColor(0.0, 0.0, 0.0, 1.0);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+
+    // Activate texture unit 0 and bind the loaded texture
+    gl.activeTexture(gl.TEXTURE0);
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+
     // Bind the VAO and draw the full-screen quad
     gl.bindVertexArray(vao);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+
+    // Request the next frame
+    requestAnimationFrame(render);
 };
 
 // Start the render loop
-const render = () => {
-    draw();
-    requestAnimationFrame(render);
-};
 requestAnimationFrame(render);
